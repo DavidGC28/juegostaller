@@ -1,0 +1,107 @@
+/* Importar fuentes modernas estilo retro-futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono&display=swap');
+
+:root {
+  --neon-purple: #bc13fe;
+  --neon-green: #39ff14;
+  --bg-dark: #0a0514; /* Fondo mucho más oscuro */
+  --panel-bg: #150a24;
+  --text-white: #e0e0e0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Space Mono', monospace;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--panel-bg);
+  border: 1px solid var(--neon-purple);
+  box-shadow: 0 0 15px rgba(188, 19, 254, 0.2);
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif; /* Tipografía gruesa para el título */
+  text-align: center;
+  color: var(--neon-purple);
+  text-shadow: 0 0 10px var(--neon-purple), 0 0 20px rgba(188, 19, 254, 0.5);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Estilo Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  color: var(--neon-green); /* Detalles verdes */
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--neon-green);
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #2d1b4e;
+}
+
+/* Efecto Hover */
+tr:hover {
+  background-color: rgba(57, 255, 20, 0.05); /* Glow verde suave al pasar el mouse */
+  transition: 0.3s;
+}
+
+/* Botones Neon */
+button {
+  background: transparent;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 8px 20px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: var(--neon-green);
+  color: var(--bg-dark);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* Contenedor de la barra de progreso */
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background-color: #0a0514;
+  border: 1px solid var(--neon-green);
+  border-radius: 5px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+/* El relleno de la barra */
+.progress-bar {
+  height: 100%;
+  background-color: var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green);
+  transition: width 0.5s ease-in-out;
+}
+
+/* Espaciado para los botones si decides mantenerlos abajo */
+.button-group {
+  display: flex;
+  gap: 5px;
+}
