@@ -1,0 +1,56 @@
+/* navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  /* Fondo morado oscuro a negro para separar del resto */
+  background: linear-gradient(180deg, #1a0b2e 0%, #0a0a0c 100%);
+  border-bottom: 3px solid var(--neon-purple);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(188, 19, 254, 0.2);
+  margin-bottom: 2.5rem;
+  border-radius: 0 0 15px 15px;
+}
+
+.navbar-logo h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-green);
+  margin: 0;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px var(--neon-green), 0 0 20px rgba(0, 0, 0, 0.8);
+  font-size: 1.5rem;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Botones estilo Arcade */
+.nav-btn {
+  background: transparent;
+  border: 2px solid var(--neon-purple);
+  color: var(--text-white);
+  padding: 10px 25px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px var(--neon-purple);
+}
+
+.nav-btn:hover {
+  background: var(--neon-purple);
+  color: var(--bg-dark);
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 20px var(--neon-purple), 0 0 40px var(--neon-purple);
+  transform: scale(1.05);
+}
+
+.nav-btn:active {
+  transform: scale(0.95);
+}

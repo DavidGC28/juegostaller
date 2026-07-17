@@ -1,6 +1,9 @@
 import "./estilosJuegos.css";
 
+
 function Videojuegos({ juegos, onEditar, onBorrar }) {
+
+  
   return (
     <div className="container">
       <h1>Videojuegos de Pelea</h1>
@@ -30,7 +33,7 @@ function Videojuegos({ juegos, onEditar, onBorrar }) {
                 </div>
                 <div className="button-group">
                   <button onClick={() => onEditar(juego)}>Editar</button>
-                  <button onClick={() => onBorrar(juego)}>Borrar</button>
+                  <button onClick={() => onBorrar(juego.id)}>Borrar</button>
                 </div>
               </td>
             </tr>

@@ -1,5 +1,5 @@
 const data = [
-  [
+  
     {
       "id": 1,
       "nombre": "Tekken 8",
@@ -40,7 +40,13 @@ const data = [
       "precio": 29.99,
       "descripcion": "Juego de lucha por equipos 3vs3 de ritmo rápido basado en la popular serie de anime."
     }
-  ]
+  
 ];
 
 export default data;
+
+
+
+
+
+//

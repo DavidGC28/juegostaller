@@ -1,0 +1,86 @@
+/* Estilos para el Formulario */
+
+.formulario-contenedor {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--panel-bg);
+  border: 1px solid var(--neon-purple);
+  box-shadow: 0 0 20px rgba(188, 19, 254, 0.3);
+  border-radius: 20px;
+  color: var(--text-white);
+}
+
+.formulario-contenedor h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--neon-purple);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px var(--neon-purple);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  color: var(--neon-green);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-dark);
+  border: 1px solid #4a3070;
+  border-radius: 5px;
+  color: var(--text-white);
+  font-family: 'Space Mono', monospace;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+  outline: none;
+  border-color: var(--neon-green);
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.botones-grupo {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Botones específicos para el formulario */
+.btn-guardar {
+  background: var(--neon-green);
+  color: var(--bg-dark);
+  border: none;
+  font-weight: bold;
+}
+
+.btn-guardar:hover {
+  background: transparent;
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+.btn-cancelar {
+  background: transparent;
+  border: 1px solid var(--neon-purple);
+  color: var(--neon-purple);
+}
+
+.btn-cancelar:hover {
+  background: var(--neon-purple);
+  color: white;
+  box-shadow: 0 0 15px var(--neon-purple);
+}
