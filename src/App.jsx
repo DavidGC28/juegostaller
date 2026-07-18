@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Navbar from './componentes/navbar.jsx'; 
 import TablaJuegos from './componentes/tablaJuegos.jsx';
 import Formulario from './componentes/FormularioVideojuegos.jsx';
@@ -31,25 +32,19 @@ function App() {
   };
 
   return (
-    <div className="App-contenedor">
-      <Navbar onCambiarVista={setVista} />
-
-      {vista === 'tabla' ? (
-        <TablaJuegos 
-          juegos={juegos} 
-          onBorrar={eliminarJuego} 
-          onEditar={editarJuego} 
-        />
-      ) : vista === 'formulario' ? (
-        <Formulario 
-          juegoAEditar={juegoAEditar} 
-          onGuardar={guardarCambios} 
-          onCancelar={() => { setJuegoAEditar(null); setVista('tabla'); }} 
-        />
-      ) : (
-        <PaginaNoEncontrada />
-      )}
-    </div>
+    <BrowserRouter>
+      <div className="App-contenedor">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<TablaJuegos juegos={juegos} onBorrar={eliminarJuego} />} />
+          <Route path="/nuevo" element={<Formulario onGuardar={guardarCambios} />} />
+          <Route path="/editar/:id" element={<Formulario onGuardar={guardarCambios} />} />
+          <Route path="/nuevo" element={<Formulario onGuardar={guardarCambios} />} />
+          <Route path="/editar/:id" element={<Formulario onGuardar={guardarCambios} />} />
+          <Route path="*" element={<PaginaNoEncontrada />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
